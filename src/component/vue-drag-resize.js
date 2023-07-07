@@ -308,7 +308,7 @@ export default {
             }
 
             if (typeof ev.stopPropagation !== 'undefined') {
-                ev.stopPropagation();
+                // ev.stopPropagation();
             }
 
             if (typeof ev.preventDefault !== 'undefined') {

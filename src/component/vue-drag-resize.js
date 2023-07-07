@@ -246,8 +246,6 @@ export default {
                 return;
             }
 
-            // ev.stopPropagation();
-
             const pageX = typeof ev.pageX !== 'undefined' ? ev.pageX : ev.touches[0].pageX;
             const pageY = typeof ev.pageY !== 'undefined' ? ev.pageY : ev.touches[0].pageY;
 
@@ -272,6 +270,10 @@ export default {
                 }
                 this.bodyMove(delta);
             }
+
+            if (this.stickDrag || this.bodyDrag) {
+                ev.stopPropagation();
+            }
         },
 
         up(ev) {
@@ -284,8 +286,6 @@ export default {
 
         bodyDown(ev) {
             const { target, button } = ev;
-            // eslint-disable-next-line no-console
-            console.log(target.className);
 
             if (!this.preventActiveBehavior) {
                 this.active = true;
@@ -308,13 +308,19 @@ export default {
             if (this.dragCancel && target.getAttribute('data-drag-cancel') === this._uid.toString()) {
                 return;
             }
+            if(target.className !== 'multiselect__tags') {
+                // eslint-disable-next-line no-console
+                console.log(target.className);
+                if (typeof ev.stopPropagation !== 'undefined') {
+                    ev.stopPropagation();
+                }
 
-            if (typeof ev.stopPropagation !== 'undefined') {
-                ev.stopPropagation();
-            }
-
-            if (typeof ev.preventDefault !== 'undefined') {
-                ev.preventDefault();
+                if (typeof ev.preventDefault !== 'undefined') {
+                    ev.preventDefault();
+                }
+            }else{
+                // eslint-disable-next-line no-console
+                console.log('multiselect__tags');
             }
 
             if (this.isDraggable) {

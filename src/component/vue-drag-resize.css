@@ -1,6 +1,7 @@
 .vdr {
     position: absolute;
     box-sizing: border-box;
+
 }
 .vdr.active:before{
     content: '';
@@ -40,6 +41,7 @@
 .vdr-stick.not-resizable{
     display: none;
 }
+
 .content-container{
     display: block;
     position: relative;

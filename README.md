@@ -3,9 +3,9 @@
 
 <p align="center">
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/vue-drag-resize.svg?style=flat-square)](https://npmjs.com/package/vue-drag-resize)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![npm](https://img.shields.io/npm/dt/vue-drag-resize.svg?style=flat-square)](https://www.npmjs.com/package/vue-drag-resize)
+  [![Latest Version on NPM](https://img.shields.io/npm/v/vue-drag-resize.svg?style=flat-square)](https://npmjs.com/package/vue-drag-resize)
+  [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+  [![npm](https://img.shields.io/npm/dt/vue-drag-resize.svg?style=flat-square)](https://www.npmjs.com/package/vue-drag-resize)
 </p>
 
 <p align="center">
@@ -31,7 +31,7 @@
 
 ### Features
 
-* A lightweight, no-dependency
+* A lightweight, no-dependency 
 * All props are reactive
 * Support touch events
 * Snap element to custom grid
@@ -108,7 +108,7 @@ Type: `Boolean`<br>
 Required: `false`<br>
 Default: `false`
 
-Determines whether the component should be active.
+Determines whether the component should be active. 
 
 确定组件是否应处于活动状态。
 
@@ -262,7 +262,7 @@ Define the grid step size for the vertical axis. Both sides of the component (to
 ```html
 <vue-drag-resize :snapToGrid="true" :gridY="20">
 ```
-
+  
 #### aspectRatio
 Type: `Boolean`<br>
 Required: `false`<br>

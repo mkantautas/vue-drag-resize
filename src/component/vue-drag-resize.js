@@ -229,7 +229,7 @@ export default {
         }
     },
 
-    beforeDestroy() {
+    beforeUnmount() {
         removeEvents(this.domEvents);
     },
 
@@ -444,6 +444,7 @@ export default {
             let newBottom = dimensionsBeforeMove.bottom;
             let newLeft = dimensionsBeforeMove.left;
             let newRight = dimensionsBeforeMove.right;
+
             switch(currentStick[0]) {
                 case 'b':
                     newBottom = dimensionsBeforeMove.bottom + delta.y;
@@ -689,8 +690,8 @@ export default {
 
         sizeStyle(){
             return {
-                width: this.w == 'auto' ? 'auto' : this.width + 'px',
-                height: this.h == 'auto' ? 'auto' : this.height + 'px'
+                width: this.width + 'px',
+                height: this.height + 'px'
             };
         },
 

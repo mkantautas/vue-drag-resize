@@ -194,6 +194,7 @@ export default {
     },
 
     mounted() {
+        console.log('sanity check');
         this.parentElement = this.$el.parentNode;
         this.parentWidth = this.parentW ? this.parentW : this.parentElement.clientWidth;
         this.parentHeight = this.parentH ? this.parentH : this.parentElement.clientHeight;

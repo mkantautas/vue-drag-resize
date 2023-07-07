@@ -246,7 +246,7 @@ export default {
                 return;
             }
 
-            ev.stopPropagation();
+            // ev.stopPropagation();
 
             const pageX = typeof ev.pageX !== 'undefined' ? ev.pageX : ev.touches[0].pageX;
             const pageY = typeof ev.pageY !== 'undefined' ? ev.pageY : ev.touches[0].pageY;
@@ -308,7 +308,7 @@ export default {
             }
 
             if (typeof ev.stopPropagation !== 'undefined') {
-                // ev.stopPropagation();
+                ev.stopPropagation();
             }
 
             if (typeof ev.preventDefault !== 'undefined') {

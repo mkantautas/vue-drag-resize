@@ -307,20 +307,20 @@ export default {
                 return;
             }
 
-            if(target.className !== 'multiselect__tags') {
-                // eslint-disable-next-line no-console
-                console.log(target.className);
-                if (typeof ev.stopPropagation !== 'undefined') {
-                    ev.stopPropagation();
-                }
-
-                if (typeof ev.preventDefault !== 'undefined') {
-                    ev.preventDefault();
-                }
-            } else {
-                // eslint-disable-next-line no-console
-                console.log('multiselect__tags');
+            // if(target.className !== 'multiselect__tags') {
+            // eslint-disable-next-line no-console
+            // console.log(target.className);
+            if (typeof ev.stopPropagation !== 'undefined') {
+                ev.stopPropagation();
             }
+
+            if (typeof ev.preventDefault !== 'undefined') {
+                ev.preventDefault();
+            }
+            // } else {
+            //     eslint-disable-next-line no-console
+            // console.log('multiselect__tags');
+            // }
 
             if (this.isDraggable) {
                 this.bodyDrag = true;

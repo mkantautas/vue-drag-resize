@@ -246,6 +246,8 @@ export default {
                 return;
             }
 
+            ev.stopPropagation();
+
             const pageX = typeof ev.pageX !== 'undefined' ? ev.pageX : ev.touches[0].pageX;
             const pageY = typeof ev.pageY !== 'undefined' ? ev.pageY : ev.touches[0].pageY;
 
@@ -269,10 +271,6 @@ export default {
                     return;
                 }
                 this.bodyMove(delta);
-            }
-
-            if (this.stickDrag || this.bodyDrag) {
-                ev.stopPropagation();
             }
         },
 
@@ -308,6 +306,7 @@ export default {
             if (this.dragCancel && target.getAttribute('data-drag-cancel') === this._uid.toString()) {
                 return;
             }
+
             if(target.className !== 'multiselect__tags') {
                 // eslint-disable-next-line no-console
                 console.log(target.className);
@@ -318,7 +317,7 @@ export default {
                 if (typeof ev.preventDefault !== 'undefined') {
                     ev.preventDefault();
                 }
-            }else{
+            } else {
                 // eslint-disable-next-line no-console
                 console.log('multiselect__tags');
             }

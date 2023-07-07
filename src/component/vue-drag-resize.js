@@ -284,6 +284,8 @@ export default {
 
         bodyDown(ev) {
             const { target, button } = ev;
+            // eslint-disable-next-line no-console
+            console.log(target.className);
 
             if (!this.preventActiveBehavior) {
                 this.active = true;
